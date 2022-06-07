@@ -32,19 +32,6 @@ export class AuthService {
 
     return this.http.post(url, body, httpOptions);
   }
-  
-  loginjti(credentials: any): Observable<any> {
-    const url = SSO_URL + ServiceMapping.LOGIN_URL;
-    const body = JSON.stringify(credentials);
-
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-
-    return this.http.post(url, body, httpOptions);
-  }
 
   /**
    * Request new password by send url reset to inputed email.
